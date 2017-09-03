@@ -4,10 +4,10 @@ Before you can begin using Stapler, there's a few things you're going to have to
 
 ```php
 // Boot stapler:
-\Codesleeve\Stapler\Stapler::boot();
+\Hollogram\Stapler\Stapler::boot();
 
-// Set the configuration driver (we're using the default config driver here; if you choose to implement your own you'll need to implement Codesleeve\Stapler\Config\ConfigurableInterface):
-$config = new Codesleeve\Stapler\Config\NativeConfig;
+// Set the configuration driver (we're using the default config driver here; if you choose to implement your own you'll need to implement Hollogram\Stapler\Config\ConfigurableInterface):
+$config = new Hollogram\Stapler\Config\NativeConfig;
 Stapler::setConfigInstance($config);
 
 // Set the location to your application's document root:
@@ -18,11 +18,11 @@ $config->set('stapler.base_path', 'path/to/your/base/folder');
 ```
 
 ### Traits/Drivers
-Stapler works via the use of traits.  In order to add file uploading capabilities to your models/entities, you'll have to first use the corresponding trait for your ORM and ensure that your entities implement `Codesleeve\Stapler\ORM\StaplerableInterface`.  Stapler currently supports the following ORMS (more coming soon):
+Stapler works via the use of traits.  In order to add file uploading capabilities to your models/entities, you'll have to first use the corresponding trait for your ORM and ensure that your entities implement `Hollogram\Stapler\ORM\StaplerableInterface`.  Stapler currently supports the following ORMS (more coming soon):
 * Eloquent: A trait for use within Laravel's Eloquent ORM.  Use this trait inside your Eloquent models in order to add file attachment abilities to them:
 ```php
-	use Codesleeve\Stapler\ORM\StaplerableInterface;
-	use Codesleeve\Stapler\ORM\EloquentTrait;
+	use Hollogram\Stapler\ORM\StaplerableInterface;
+	use Hollogram\Stapler\ORM\EloquentTrait;
 
 	class FooModel extends Eloquent implements StaplerableInterface{
 		use EloquentTrait;

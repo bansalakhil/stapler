@@ -1,12 +1,12 @@
 <?php
 
-namespace Codesleeve\Stapler\Interfaces;
+namespace Hollogram\Stapler\Interfaces;
 
-use Codesleeve\Stapler\AttachmentConfig;
-use Codesleeve\Stapler\Interfaces\Interpolator as InterpolatorInterface;
-use Codesleeve\Stapler\Interfaces\Resizer as ResizerInterface;
-use Codesleeve\Stapler\Interfaces\Storage as StorageInterface;
-use Codesleeve\Stapler\ORM\StaplerableInterface;
+use Hollogram\Stapler\AttachmentConfig;
+use Hollogram\Stapler\Interfaces\Interpolator as InterpolatorInterface;
+use Hollogram\Stapler\Interfaces\Resizer as ResizerInterface;
+use Hollogram\Stapler\Interfaces\Storage as StorageInterface;
+use Hollogram\Stapler\ORM\StaplerableInterface;
 
 interface Attachment
 {
@@ -33,7 +33,7 @@ interface Attachment
     /**
      * Accessor method for the uploadedFile property.
      *
-     * @return \Codesleeve\Stapler\Interfaces\File
+     * @return \Hollogram\Stapler\Interfaces\File
      */
     public function getUploadedFile();
 

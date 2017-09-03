@@ -1,17 +1,17 @@
 <?php
 
-namespace Codesleeve\Stapler\Storage;
+namespace Hollogram\Stapler\Storage;
 
-use Codesleeve\Stapler\Interfaces\Storage as StorageInterface;
+use Hollogram\Stapler\Interfaces\Storage as StorageInterface;
 use Aws\S3\S3Client;
-use Codesleeve\Stapler\Attachment;
+use Hollogram\Stapler\Attachment;
 
 class S3 implements StorageInterface
 {
     /**
      * The current attachedFile object being processed.
      *
-     * @var \Codesleeve\Stapler\Attachment
+     * @var \Hollogram\Stapler\Attachment
      */
     public $attachedFile;
 

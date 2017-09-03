@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Exceptions;
+namespace Hollogram\Stapler\Exceptions;
 
 use Exception;
 

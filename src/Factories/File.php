@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
-use Codesleeve\Stapler\File\File as StaplerFile;
-use Codesleeve\Stapler\File\UploadedFile as StaplerUploadedFile;
-use Codesleeve\Stapler\Interfaces\Config as ConfigInterface;
+use Hollogram\Stapler\File\File as StaplerFile;
+use Hollogram\Stapler\File\UploadedFile as StaplerUploadedFile;
+use Hollogram\Stapler\Interfaces\Config as ConfigInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile as SymfonyUploadedFile;
 use Symfony\Component\HttpFoundation\File\MimeType\MimeTypeGuesser;
 use Symfony\Component\HttpFoundation\File\MimeType\MimeTypeExtensionGuesser;
@@ -19,12 +19,12 @@ class File
     protected static $mimeTypeExtensionGuesser;
 
     /**
-     * Build a Codesleeve\Stapler\UploadedFile object using various file input types.
+     * Build a Hollogram\Stapler\UploadedFile object using various file input types.
      *
      * @param mixed $file
      * @param bool  $testing
      *
-     * @return \Codesleeve\Stapler\File\UploadedFile
+     * @return \Hollogram\Stapler\File\UploadedFile
      */
     public static function create($file, $testing = false)
     {
@@ -48,12 +48,12 @@ class File
     }
 
     /**
-     * Compose a \Codesleeve\Stapler\File\UploadedFile object from
+     * Compose a \Hollogram\Stapler\File\UploadedFile object from
      * a \Symfony\Component\HttpFoundation\File\UploadedFile object.
      *
      * @param \Symfony\Component\HttpFoundation\File\UploadedFile $file
      *
-     * @return \Codesleeve\Stapler\File\UploadedFile
+     * @return \Hollogram\Stapler\File\UploadedFile
      */
     protected static function createFromObject(SymfonyUploadedFile $file)
     {
@@ -64,18 +64,18 @@ class File
     }
 
     /**
-     * Compose a \Codesleeve\Stapler\File\UploadedFile object from a
+     * Compose a \Hollogram\Stapler\File\UploadedFile object from a
      * data uri.
      *
      * @param  string $file
-     * @return \Codesleeve\Stapler\File\File
+     * @return \Hollogram\Stapler\File\File
      */
     protected static function createFromDataURI($file)
     {
         $fp = @fopen($file, 'r');
 
         if (!$fp) {
-            throw new \Codesleeve\Stapler\Exceptions\FileException('Invalid data URI');
+            throw new \Hollogram\Stapler\Exceptions\FileException('Invalid data URI');
         }
 
         $meta = stream_get_meta_data($fp);
@@ -88,14 +88,14 @@ class File
     }
 
     /**
-     * Build a Codesleeve\Stapler\File\File object from the
+     * Build a Hollogram\Stapler\File\File object from the
      * raw php $_FILES array date.  We assume here that the $_FILES array
      * has been formated using the Stapler::arrangeFiles utility method.
      *
      * @param array $file
      * @param bool  $testing
      *
-     * @return \Codesleeve\Stapler\File\File
+     * @return \Hollogram\Stapler\File\File
      */
     protected static function createFromArray(array $file, $testing)
     {
@@ -106,11 +106,11 @@ class File
 
     /**
      * Fetch a remote file using a string URL and convert it into
-     * an instance of Codesleeve\Stapler\File\File.
+     * an instance of Hollogram\Stapler\File\File.
      *
      * @param string $file
      *
-     * @return \Codesleeve\Stapler\File\File
+     * @return \Hollogram\Stapler\File\File
      */
     protected static function createFromUrl($file)
     {
@@ -154,11 +154,11 @@ class File
 
     /**
      * Fetch a local file using a string location and convert it into
-     * an instance of \Codesleeve\Stapler\File\File.
+     * an instance of \Hollogram\Stapler\File\File.
      *
      * @param string $file
      *
-     * @return \Codesleeve\Stapler\File\File
+     * @return \Hollogram\Stapler\File\File
      */
     protected static function createFromString($file)
     {

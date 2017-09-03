@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -164,15 +164,15 @@ class AttachmentTest extends PHPUnit_Framework_TestCase
     /**
      * Build an attachment object.
      *
-     * @param  \Codesleeve\Stapler\Interpolator
+     * @param  \Hollogram\Stapler\Interpolator
      *
-     * @return \Codesleeve\Stapler\Attachment
+     * @return \Hollogram\Stapler\Attachment
      */
     protected function build_attachment()
     {
         $instance = $this->build_mock_instance();
         $interpolator = new Interpolator();
-        $attachmentConfig = new \Codesleeve\Stapler\AttachmentConfig('photo', [
+        $attachmentConfig = new \Hollogram\Stapler\AttachmentConfig('photo', [
             'styles' => [],
             'default_style' => 'original',
             'url' => '/system/:attachment/:id_partition/:style/:filename',
@@ -180,12 +180,12 @@ class AttachmentTest extends PHPUnit_Framework_TestCase
         ]);
 
         $imagine = m::mock('Imagine\Image\ImagineInterface');
-        $resizer = new \Codesleeve\Stapler\File\Image\Resizer($imagine);
+        $resizer = new \Hollogram\Stapler\File\Image\Resizer($imagine);
 
-        $attachment = new \Codesleeve\Stapler\Attachment($attachmentConfig, $interpolator, $resizer);
+        $attachment = new \Hollogram\Stapler\Attachment($attachmentConfig, $interpolator, $resizer);
         $attachment->setInstance($instance);
 
-        $storageDriver = new \Codesleeve\Stapler\Storage\Filesystem($attachment);
+        $storageDriver = new \Hollogram\Stapler\Storage\Filesystem($attachment);
         $attachment->setStorageDriver($storageDriver);
 
         return $attachment;
@@ -198,7 +198,7 @@ class AttachmentTest extends PHPUnit_Framework_TestCase
      */
     protected function build_mock_instance()
     {
-        $instance = m::mock('Codesleeve\Stapler\ORM\StaplerableInterface');
+        $instance = m::mock('Hollogram\Stapler\ORM\StaplerableInterface');
         $instance->shouldReceive('getKey')->andReturn(1);
         $instance->shouldReceive('getAttribute')->with('photo_file_name')->andReturn('empty.gif');
         $instance->shouldReceive('getAttribute')->with('photo_file_size')->andReturn(0);

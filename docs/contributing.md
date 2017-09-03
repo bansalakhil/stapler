@@ -38,7 +38,7 @@ foreach ($foo as $bar)
 
 File and class names should always be camel cased.  Namespace and class declarations should always look like the following:
 ```php
-<?php namespace Codesleeve\Stapler\Foo\Bar;
+<?php namespace Hollogram\Stapler\Foo\Bar;
 
 
 class Baz

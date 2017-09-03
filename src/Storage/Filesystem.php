@@ -1,17 +1,17 @@
 <?php
 
-namespace Codesleeve\Stapler\Storage;
+namespace Hollogram\Stapler\Storage;
 
-use Codesleeve\Stapler\Interfaces\Storage as StorageInterface;
-use Codesleeve\Stapler\Exceptions;
-use Codesleeve\Stapler\Attachment;
+use Hollogram\Stapler\Interfaces\Storage as StorageInterface;
+use Hollogram\Stapler\Exceptions;
+use Hollogram\Stapler\Attachment;
 
 class Filesystem implements StorageInterface
 {
     /**
      * The current attachedFile object being processed.
      *
-     * @var \Codesleeve\Stapler\Attachment
+     * @var \Hollogram\Stapler\Attachment
      */
     public $attachedFile;
 

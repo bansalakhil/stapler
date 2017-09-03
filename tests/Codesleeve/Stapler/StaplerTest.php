@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -46,7 +46,7 @@ class StaplerTest extends PHPUnit_Framework_TestCase
         $interpolator1 = Stapler::getInterpolatorInstance();
         $interpolator2 = Stapler::getInterpolatorInstance();
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Interpolator', $interpolator1);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Interpolator', $interpolator1);
         $this->assertSame($interpolator1, $interpolator2);
     }
 
@@ -61,7 +61,7 @@ class StaplerTest extends PHPUnit_Framework_TestCase
         $validator1 = Stapler::getValidatorInstance();
         $validator2 = Stapler::getValidatorInstance();
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Validator', $validator1);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Validator', $validator1);
         $this->assertSame($validator1, $validator2);
     }
 
@@ -76,7 +76,7 @@ class StaplerTest extends PHPUnit_Framework_TestCase
         $resizer1 = Stapler::getResizerInstance('Imagine\Gd\Imagine');
         $resizer2 = Stapler::getResizerInstance('Imagine\Gd\Imagine');
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Resizer', $resizer1);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Resizer', $resizer1);
         $this->assertSame($resizer1, $resizer2);
     }
 
@@ -112,7 +112,7 @@ class StaplerTest extends PHPUnit_Framework_TestCase
                 'scheme' => 'http',
             ],
         ]);
-        $mockAttachment = m::mock('Codesleeve\Stapler\Attachment')->makePartial();
+        $mockAttachment = m::mock('Hollogram\Stapler\Attachment')->makePartial();
         $mockAttachment->shouldReceive('getInstanceClass')->twice()->andReturn('TestModel');
         $mockAttachment->setConfig($dummyConfig);
 
@@ -125,7 +125,7 @@ class StaplerTest extends PHPUnit_Framework_TestCase
 
     /**
      * Test that the stapler class can build a single instance of
-     * Codesleeve\Stapler\Config\NativeConfig.
+     * Hollogram\Stapler\Config\NativeConfig.
      *
      * @test
      */
@@ -134,8 +134,8 @@ class StaplerTest extends PHPUnit_Framework_TestCase
         $config1 = Stapler::getConfigInstance();
         $config2 = Stapler::getConfigInstance();
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Config\NativeConfig', $config1);
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Config', $config1);
+        $this->assertInstanceOf('Hollogram\Stapler\Config\NativeConfig', $config1);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Config', $config1);
         $this->assertSame($config1, $config2);
     }
 }

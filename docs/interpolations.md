@@ -19,7 +19,7 @@ If you need your own custom interpolations, you can easily swap out the default 
 
 ```php
 
-use Codesleeve\Stapler\Interpolator as BaseInterpolator;
+use Hollogram\Stapler\Interpolator as BaseInterpolator;
 
 class CustomerInterpolator extends BaseInterpolator
 {

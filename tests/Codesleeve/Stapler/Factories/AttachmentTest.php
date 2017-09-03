@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
 use PHPUnit_Framework_TestCase;
 
@@ -30,6 +30,6 @@ class AttachmentTest extends PHPUnit_Framework_TestCase
     {
         $attachment = Attachment::create('testAttachment', []);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Attachment', $attachment);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Attachment', $attachment);
     }
 }

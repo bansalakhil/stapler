@@ -1,8 +1,8 @@
 <?php
 
-namespace Codesleeve\Stapler\Interfaces;
+namespace Hollogram\Stapler\Interfaces;
 
-use Codesleeve\Stapler\Interfaces\Attachment as AttachmentInterface;
+use Hollogram\Stapler\Interfaces\Attachment as AttachmentInterface;
 
 interface Interpolator
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Codesleeve\Stapler\Config;
+namespace Hollogram\Stapler\Config;
 
-use Codesleeve\Stapler\Interfaces\Config as ConfigInterface;
+use Hollogram\Stapler\Interfaces\Config as ConfigInterface;
 
 class NativeConfig implements ConfigInterface
 {
@@ -43,11 +43,11 @@ class NativeConfig implements ConfigInterface
             'path' => ':attachment/:id/:style/:filename',
         ],
         'bindings' => [
-            'attachment' => '\Codesleeve\Stapler\Attachment',
-            'interpolator' => '\Codesleeve\Stapler\Interpolator',
-            'resizer' => '\Codesleeve\Stapler\File\Image\Resizer',
-            'style' => '\Codesleeve\Stapler\Style',
-            'validator' => '\Codesleeve\Stapler\Validator',
+            'attachment' => '\Hollogram\Stapler\Attachment',
+            'interpolator' => '\Hollogram\Stapler\Interpolator',
+            'resizer' => '\Hollogram\Stapler\File\Image\Resizer',
+            'style' => '\Hollogram\Stapler\Style',
+            'validator' => '\Hollogram\Stapler\Validator',
         ]
     ];
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
-use Codesleeve\Stapler\Interfaces\Attachment as AttachmentInterface;
-use Codesleeve\Stapler\Interfaces\Interpolator as InterpolatorInterface;
-use Codesleeve\Stapler\Interfaces\Resizer as ResizerInterface;
-use Codesleeve\Stapler\Interfaces\Storage as StorageInterface;
-use Codesleeve\Stapler\ORM\StaplerableInterface;
-use Codesleeve\Stapler\Factories\File as FileFactory;
+use Hollogram\Stapler\Interfaces\Attachment as AttachmentInterface;
+use Hollogram\Stapler\Interfaces\Interpolator as InterpolatorInterface;
+use Hollogram\Stapler\Interfaces\Resizer as ResizerInterface;
+use Hollogram\Stapler\Interfaces\Storage as StorageInterface;
+use Hollogram\Stapler\ORM\StaplerableInterface;
+use Hollogram\Stapler\Factories\File as FileFactory;
 use JsonSerializable;
 use DateTime;
 
@@ -44,14 +44,14 @@ class Attachment implements AttachmentInterface, JsonSerializable
     /**
      * The uploaded file object for the attachment.
      *
-     * @var \Codesleeve\Stapler\Interfaces\File
+     * @var \Hollogram\Stapler\Interfaces\File
      */
     protected $uploadedFile;
 
     /**
      * An instance of the resizer library that's being used for image processing.
      *
-     * @var \Codesleeve\Stapler\File\Image\Resizer
+     * @var \Hollogram\Stapler\File\Image\Resizer
      */
     protected $resizer;
 
@@ -139,7 +139,7 @@ class Attachment implements AttachmentInterface, JsonSerializable
     /**
      * Accessor method for the uploadedFile property.
      *
-     * @return \Codesleeve\Stapler\Interfaces\File
+     * @return \Hollogram\Stapler\Interfaces\File
      */
     public function getUploadedFile()
     {

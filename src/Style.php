@@ -1,8 +1,8 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
-use Codesleeve\Stapler\Interfaces\Style as StyleInterface;
+use Hollogram\Stapler\Interfaces\Style as StyleInterface;
 
 class Style implements StyleInterface
 {

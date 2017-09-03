@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Config;
+namespace Hollogram\Stapler\Config;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\ORM;
+namespace Hollogram\Stapler\ORM;
 
 interface StaplerableInterface
 {

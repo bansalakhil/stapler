@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 class AttachmentConfig
 {
@@ -19,7 +19,7 @@ class AttachmentConfig
     protected $options;
 
     /**
-     * An array of Codesleeve\Stapler\Style objects.
+     * An array of Hollogram\Stapler\Style objects.
      *
      * @var array
      */

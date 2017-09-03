@@ -1,11 +1,11 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
-use Codesleeve\Stapler\Attachment as AttachedFile;
-use Codesleeve\Stapler\Storage\Filesystem;
-use Codesleeve\Stapler\Storage\S3;
-use Codesleeve\Stapler\Stapler;
+use Hollogram\Stapler\Attachment as AttachedFile;
+use Hollogram\Stapler\Storage\Filesystem;
+use Hollogram\Stapler\Storage\S3;
+use Hollogram\Stapler\Stapler;
 
 class Storage
 {
@@ -14,7 +14,7 @@ class Storage
      *
      * @param AttachedFile $attachment
      *
-     * @return \Codesleeve\Stapler\Storage\StorageableInterface
+     * @return \Hollogram\Stapler\Storage\StorageableInterface
      */
     public static function create(AttachedFile $attachment)
     {

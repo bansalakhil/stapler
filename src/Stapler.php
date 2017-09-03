@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
-use Codesleeve\Stapler\Interfaces\Attachment as AttachmentInterface;
-use Codesleeve\Stapler\Interfaces\Config as ConfigInterface;
-use Codesleeve\Stapler\File\Image\Resizer;
+use Hollogram\Stapler\Interfaces\Attachment as AttachmentInterface;
+use Hollogram\Stapler\Interfaces\Config as ConfigInterface;
+use Hollogram\Stapler\File\Image\Resizer;
 use Aws\S3\S3Client;
 
 /**
@@ -32,21 +32,21 @@ class Stapler
     /**
      * An instance of the interpolator class for processing interpolations.
      *
-     * @var \Codesleeve\Stapler\Interfaces\Interpolator
+     * @var \Hollogram\Stapler\Interfaces\Interpolator
      */
     protected static $interpolator;
 
     /**
      * An instance of the validator class for validating attachment configurations.
      *
-     * @var \Codesleeve\Stapler\Interfaces\Validator
+     * @var \Hollogram\Stapler\Interfaces\Validator
      */
     protected static $validator;
 
     /**
      * An instance of the resizer class for processing images.
      *
-     * @var \Codesleeve\Stapler\Interfaces\Resizer
+     * @var \Hollogram\Stapler\Interfaces\Resizer
      */
     protected static $resizer;
 
@@ -97,7 +97,7 @@ class Stapler
      * If there's currently no instance in memory we'll create one
      * and then hang it as a property on this class.
      *
-     * @return \Codesleeve\Stapler\Interfaces\Interpolator
+     * @return \Hollogram\Stapler\Interfaces\Interpolator
      */
     public static function getInterpolatorInstance()
     {
@@ -114,7 +114,7 @@ class Stapler
      * If there's currently no instance in memory we'll create one
      * and then hang it as a property on this class.
      *
-     * @return \Codesleeve\Stapler\Interfaces\Validator
+     * @return \Hollogram\Stapler\Interfaces\Validator
      */
     public static function getValidatorInstance()
     {
@@ -131,7 +131,7 @@ class Stapler
      *
      * @param string $type
      *
-     * @return \Codesleeve\Stapler\Interfaces\Resizer
+     * @return \Hollogram\Stapler\Interfaces\Resizer
      */
     public static function getResizerInstance($type)
     {
@@ -190,7 +190,7 @@ class Stapler
     /**
      * Return a configuration object instance.
      * If no instance is currently set, we'll return an instance
-     * of Codesleeve\Stapler\Config\NativeConfig.
+     * of Hollogram\Stapler\Config\NativeConfig.
      *
      * @return ConfigInterface
      */

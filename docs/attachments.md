@@ -2,12 +2,12 @@
 Attachments are the bread and butter of Stapler.  When you define an attached file on a model, your model automatically gains a new property containing an attachment value object for representing uploaded files on that record.  Regardless or whether you've uploaded a file or not, this value object will exist.  This allows file uploads to be represented in a simple yet powerful object oriented fashion.
 
 ### Properties
-* *Codesleeve\Stapler\ORM\StaplerableInterface* **instance**: The model instance that the attachment belongs to.
-* *Codesleeve\Stapler\AttachmentConfig* **config**: The attachment's config value object.
-* *Codesleeve\Stapler\Storage\StorageableInterface* **storageDriver**: An instance of the underlying storage driver being used by the attachment.
-* *Codesleeve\Stapler\Interpolator* **interpolator**: An instance of the interpolator class for processing interpolations.
-* *Codesleeve\Stapler\File\FileInterface* **uploadedFile**: The uploaded file object for the attachment.
-* *Codesleeve\Stapler\File\Image\Resizer* **resizer**: An instance of the resizer library that's being used for image processing.
+* *Hollogram\Stapler\ORM\StaplerableInterface* **instance**: The model instance that the attachment belongs to.
+* *Hollogram\Stapler\AttachmentConfig* **config**: The attachment's config value object.
+* *Hollogram\Stapler\Storage\StorageableInterface* **storageDriver**: An instance of the underlying storage driver being used by the attachment.
+* *Hollogram\Stapler\Interpolator* **interpolator**: An instance of the interpolator class for processing interpolations.
+* *Hollogram\Stapler\File\FileInterface* **uploadedFile**: The uploaded file object for the attachment.
+* *Hollogram\Stapler\File\Image\Resizer* **resizer**: An instance of the resizer library that's being used for image processing.
 * *array* **queuedForDeletion**: An array of uploaded file objects queued up for deletion by Stapler.
 * *array* **queuedForWrite**: An array of uploaded file objects queued up to be written to storage by Stapler.
 
@@ -30,21 +30,21 @@ This JSON object contains the paths and urls for each style defined on the attac
 ### Methods
 Attachments contain an assortment of methods for working with uploaded files and their properties:
 
-* **setUploadedFile**: Mutator method for setting the uploadedFile property on the attachment.  When a model is using stapler and a property value is set for one of the attachments defined on that model, this method is called.  This allows allows files to be passed to stapler in multiple formats (strings, array, or symfony uploaded file objects) while ensuring that they're all converted to an instance of *Codesleeve\Stapler\File\FileInterface*.
+* **setUploadedFile**: Mutator method for setting the uploadedFile property on the attachment.  When a model is using stapler and a property value is set for one of the attachments defined on that model, this method is called.  This allows allows files to be passed to stapler in multiple formats (strings, array, or symfony uploaded file objects) while ensuring that they're all converted to an instance of *Hollogram\Stapler\File\FileInterface*.
 
-* **getUploadedFile**: Accessor method for the uploadedFile property on the attachment.  Returns an instance of *Codesleeve\Stapler\File\FileInterface*.
+* **getUploadedFile**: Accessor method for the uploadedFile property on the attachment.  Returns an instance of *Hollogram\Stapler\File\FileInterface*.
 
 * **setInterpolator**: Mutator method for setting the interpolator property on the attachment.
 
-* **getInterpolator**: Accessor method for the interpolator property on the attachment.  Returns an instance of *Codesleeve\Stapler\Interpolator*.
+* **getInterpolator**: Accessor method for the interpolator property on the attachment.  Returns an instance of *Hollogram\Stapler\Interpolator*.
 
 * **setResizer**: Mutator method for setting the resizer property on the attachment.
 
-* **getResizer**: Accessor method for the resizer property on the attachment.  Returns an instance of *Codesleeve\Stapler\File\Image\Resizer*.  The resizer object is responsible for all of the geometry calculations, auto-orient calculations, etc that are done when an image is processed.
+* **getResizer**: Accessor method for the resizer property on the attachment.  Returns an instance of *Hollogram\Stapler\File\Image\Resizer*.  The resizer object is responsible for all of the geometry calculations, auto-orient calculations, etc that are done when an image is processed.
 
 * **setStorageDriver**: Mutator method for setting the storageDriver property on the attachment.
 
-* **getStorageDriver**: Accessor method for the storageDriver property on the attachment.  Returns an instance of *Codesleeve\Stapler\Storage\StorageableInterface*.  The storageDriver object is responsible handling the underlying storage of an uploaded file across the various storage mediums (file system, S3, etc).
+* **getStorageDriver**: Accessor method for the storageDriver property on the attachment.  Returns an instance of *Hollogram\Stapler\Storage\StorageableInterface*.  The storageDriver object is responsible handling the underlying storage of an uploaded file across the various storage mediums (file system, S3, etc).
 
 * **setInstance**: Mutator method for setting the instance property on the attachment.
 
@@ -52,7 +52,7 @@ Attachments contain an assortment of methods for working with uploaded files and
 
 * **setConfig**: Mutator method for setting the config property on the attachment.
 
-* **getConfig**: Accessor method for the config property on the attachment.  Configuration for attachment objects are stored in a value object of type *Codesleeve\Stapler\AttachmentConfig*.
+* **getConfig**: Accessor method for the config property on the attachment.  Configuration for attachment objects are stored in a value object of type *Hollogram\Stapler\AttachmentConfig*.
 
 * **getQueuedForDeletion**: Accessor method for the queuedForDeletion property.
 

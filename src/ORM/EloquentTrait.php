@@ -1,8 +1,8 @@
 <?php
 
-namespace Codesleeve\Stapler\ORM;
+namespace Hollogram\Stapler\ORM;
 
-use Codesleeve\Stapler\Factories\Attachment as AttachmentFactory;
+use Hollogram\Stapler\Factories\Attachment as AttachmentFactory;
 
 trait EloquentTrait
 {

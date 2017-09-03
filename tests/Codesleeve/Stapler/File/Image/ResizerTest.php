@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\File\Image;
+namespace Hollogram\Stapler\File\Image;
 
 use PHPUnit_Framework_TestCase;
-use Codesleeve\Stapler\File\UploadedFile;
-use Codesleeve\Stapler\Style;
+use Hollogram\Stapler\File\UploadedFile;
+use Hollogram\Stapler\Style;
 use Symfony\Component\HttpFoundation\File\UploadedFile as SymfonyUploadedFile;
 use Imagine\Image\Box;
 use Imagine\Image\Point;

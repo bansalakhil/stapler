@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\File;
+namespace Hollogram\Stapler\File;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile as SymfonyUploadedFile;
-use Codesleeve\Stapler\Exceptions\FileException;
-use Codesleeve\Stapler\Interfaces\File as FileInterface;
+use Hollogram\Stapler\Exceptions\FileException;
+use Hollogram\Stapler\Interfaces\File as FileInterface;
 
 class UploadedFile implements FileInterface
 {

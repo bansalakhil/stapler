@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -72,7 +72,7 @@ class StyleTest extends PHPUnit_Framework_TestCase
      * of values withou a 'dimensions' key.
      *
      * @test
-     * @expectedException \Codesleeve\Stapler\Exceptions\InvalidStyleConfigurationException
+     * @expectedException \Hollogram\Stapler\Exceptions\InvalidStyleConfigurationException
      */
     public function it_should_throw_an_exception_if_passed_an_array_of_values_withou_a_dimensions_key()
     {

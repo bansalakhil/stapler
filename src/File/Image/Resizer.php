@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\File\Image;
+namespace Hollogram\Stapler\File\Image;
 
-use Codesleeve\Stapler\Interfaces\Resizer as ResizerInterface;
-use Codesleeve\Stapler\Interfaces\File as FileInterface;
-use Codesleeve\Stapler\Interfaces\Style as StyleInterface;
+use Hollogram\Stapler\Interfaces\Resizer as ResizerInterface;
+use Hollogram\Stapler\Interfaces\File as FileInterface;
+use Hollogram\Stapler\Interfaces\Style as StyleInterface;
 use Imagine\Image\ImagineInterface;
 use Imagine\Image\ImageInterface;
 use Imagine\Image\Box;

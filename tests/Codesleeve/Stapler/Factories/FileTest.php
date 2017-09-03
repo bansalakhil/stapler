@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
 use PHPUnit_Framework_TestCase;
 use Symfony\Component\HttpFoundation\File\UploadedFile as SymfonyUploadedFile;
@@ -22,7 +22,7 @@ class FileTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test that the file factory can create a Codesleeve\Stapler\UploadedFile
+     * Test that the file factory can create a Hollogram\Stapler\UploadedFile
      * object from a symfony object.
      *
      * @test
@@ -33,11 +33,11 @@ class FileTest extends PHPUnit_Framework_TestCase
 
         $uploadedFile = File::create($symfonyUploadedFile);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\File', $uploadedFile);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\File', $uploadedFile);
     }
 
     /**
-     * Test that the file factory can create a Codesleeve\Stapler\UploadedFile
+     * Test that the file factory can create a Hollogram\Stapler\UploadedFile
      * object from an array.
      *
      * @test
@@ -54,11 +54,11 @@ class FileTest extends PHPUnit_Framework_TestCase
 
         $uploadedFile = File::create($fileData, true);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\File', $uploadedFile);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\File', $uploadedFile);
     }
 
     /**
-     * Test that the file factory can create a Codesleeve\Stapler\UploadedFile
+     * Test that the file factory can create a Hollogram\Stapler\UploadedFile
      * object from a url.
      *
      * @test
@@ -67,11 +67,11 @@ class FileTest extends PHPUnit_Framework_TestCase
     {
         $uploadedFile = File::create('https://www.google.com/images/srpr/logo11w.png');
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\File', $uploadedFile);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\File', $uploadedFile);
     }
 
     /**
-     * Test that the file factory can create a Codesleeve\Stapler\UploadedFile
+     * Test that the file factory can create a Hollogram\Stapler\UploadedFile
      * object from a redirect url.
      *
      * @test
@@ -80,7 +80,7 @@ class FileTest extends PHPUnit_Framework_TestCase
     {
         $uploadedFile = File::create('https://graph.facebook.com/zuck/picture?type=large');
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\File', $uploadedFile);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\File', $uploadedFile);
     }
 
   /**
@@ -108,7 +108,7 @@ class FileTest extends PHPUnit_Framework_TestCase
   }
 
     /**
-     * Test that the file factory can create a Codesleeve\Stapler\UploadedFile
+     * Test that the file factory can create a Hollogram\Stapler\UploadedFile
      * object from a string filepath.
      *
      * @test
@@ -117,7 +117,7 @@ class FileTest extends PHPUnit_Framework_TestCase
     {
         $uploadedFile = File::create(__DIR__.'/../Fixtures/empty.gif');
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\File', $uploadedFile);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\File', $uploadedFile);
     }
 
     /**

@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
-use Codesleeve\Stapler\Stapler;
-use Codesleeve\Stapler\AttachmentConfig;
-use Codesleeve\Stapler\Factories\Storage as StorageFactory;
+use Hollogram\Stapler\Stapler;
+use Hollogram\Stapler\AttachmentConfig;
+use Hollogram\Stapler\Factories\Storage as StorageFactory;
 
 class Attachment
 {
@@ -14,7 +14,7 @@ class Attachment
      * @param string $name
      * @param array  $options
      *
-     * @return \Codesleeve\Stapler\Attachment
+     * @return \Hollogram\Stapler\Attachment
      */
     public static function create($name, array $options)
     {

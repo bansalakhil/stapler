@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\Interfaces;
+namespace Hollogram\Stapler\Interfaces;
 
 use Imagine\Image\ImagineInterface;
-use Codesleeve\Stapler\Interfaces\File as FileInterface;
-use Codesleeve\Stapler\Interfaces\Style as StyleInterface;
+use Hollogram\Stapler\Interfaces\File as FileInterface;
+use Hollogram\Stapler\Interfaces\Style as StyleInterface;
 
 interface Resizer
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -77,7 +77,7 @@ class AttachmentConfigTest extends PHPUnit_Framework_TestCase
         $attachmentConfig = new AttachmentConfig('mockAttachment', ['styles' => ['baz' => '']]);
 
         $this->assertTrue(is_array($attachmentConfig->styles));
-        $this->assertInstanceOf('Codesleeve\Stapler\Interfaces\Style', $attachmentConfig->styles[0]);
+        $this->assertInstanceOf('Hollogram\Stapler\Interfaces\Style', $attachmentConfig->styles[0]);
     }
 
     /**
@@ -85,7 +85,7 @@ class AttachmentConfigTest extends PHPUnit_Framework_TestCase
      * if no styles key is present in the options array.
      *
      * @test
-     * @expectedException \Codesleeve\Stapler\Exceptions\InvalidAttachmentConfigurationException
+     * @expectedException \Hollogram\Stapler\Exceptions\InvalidAttachmentConfigurationException
      */
     public function it_should_throw_an_exception_if_no_styles_key_is_present()
     {

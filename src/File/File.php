@@ -1,9 +1,9 @@
 <?php
 
-namespace Codesleeve\Stapler\File;
+namespace Hollogram\Stapler\File;
 
 use Symfony\Component\HttpFoundation\File\File as SymfonyFile;
-use Codesleeve\Stapler\Interfaces\File as FileInterface;
+use Hollogram\Stapler\Interfaces\File as FileInterface;
 
 class File extends SymfonyFile implements FileInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Codesleeve\Stapler\Tests\File;
+namespace Hollogram\Stapler\Tests\File;
 
 use PHPUnit_Framework_TestCase;
-use Codesleeve\Stapler\File\UploadedFile;
+use Hollogram\Stapler\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\UploadedFile as SymfonyUploadedFile;
 use Mockery as m;
 
@@ -29,7 +29,7 @@ class UploadedFileTest extends PHPUnit_Framework_TestCase
      * when passed an invalid file upload object.
      *
      * @test
-     * @expectedException Codesleeve\Stapler\Exceptions\FileException
+     * @expectedException Hollogram\Stapler\Exceptions\FileException
      */
     public function it_should_throw_an_exception_if_the_file_upload_is_invalid()
     {
@@ -99,7 +99,7 @@ class UploadedFileTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Helper method to build an valid Codesleeve\Stapler\File\UploadedFile object.
+     * Helper method to build an valid Hollogram\Stapler\File\UploadedFile object.
      *
      * @return UploadedFile
      */
@@ -111,7 +111,7 @@ class UploadedFileTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * Helper method to build an invalid Codesleeve\Stapler\File\UploadedFile object.
+     * Helper method to build an invalid Hollogram\Stapler\File\UploadedFile object.
      *
      * @return UploadedFile
      */

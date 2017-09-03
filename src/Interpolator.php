@@ -1,9 +1,9 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
-use Codesleeve\Stapler\Interfaces\Interpolator as InterpolatorInterface;
-use Codesleeve\Stapler\Interfaces\Attachment as AttachmentInterface;
+use Hollogram\Stapler\Interfaces\Interpolator as InterpolatorInterface;
+use Hollogram\Stapler\Interfaces\Attachment as AttachmentInterface;
 use Doctrine\Common\Inflector\Inflector;
 
 class Interpolator implements InterpolatorInterface

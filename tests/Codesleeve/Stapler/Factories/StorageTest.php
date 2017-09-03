@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Factories;
+namespace Hollogram\Stapler\Factories;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -34,7 +34,7 @@ class StorageTest extends PHPUnit_Framework_TestCase
 
         $storage = Storage::create($attachment);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Storage\Filesystem', $storage);
+        $this->assertInstanceOf('Hollogram\Stapler\Storage\Filesystem', $storage);
     }
 
     /**
@@ -49,7 +49,7 @@ class StorageTest extends PHPUnit_Framework_TestCase
 
         $storage = Storage::create($attachment);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Storage\S3', $storage);
+        $this->assertInstanceOf('Hollogram\Stapler\Storage\S3', $storage);
     }
 
     /**
@@ -64,7 +64,7 @@ class StorageTest extends PHPUnit_Framework_TestCase
 
         $storage = Storage::create($attachment);
 
-        $this->assertInstanceOf('Codesleeve\Stapler\Storage\Filesystem', $storage);
+        $this->assertInstanceOf('Hollogram\Stapler\Storage\Filesystem', $storage);
     }
 
     /**
@@ -72,12 +72,12 @@ class StorageTest extends PHPUnit_Framework_TestCase
      *
      * @param string $type
      *
-     * @return \Codesleeve\Stapler\Attachment
+     * @return \Hollogram\Stapler\Attachment
      */
     protected function buildMockAttachment($type = null)
     {
-        $attachment = m::mock('Codesleeve\Stapler\Attachment')->makePartial();
-        $attachmentConfig = new \Codesleeve\Stapler\AttachmentConfig('testAttachmentConfig', ['styles' => []]);
+        $attachment = m::mock('Hollogram\Stapler\Attachment')->makePartial();
+        $attachmentConfig = new \Hollogram\Stapler\AttachmentConfig('testAttachmentConfig', ['styles' => []]);
         $attachment->setConfig($attachmentConfig);
         $attachment->storage = $type;
 

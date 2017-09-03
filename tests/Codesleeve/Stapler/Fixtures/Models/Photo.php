@@ -1,10 +1,10 @@
 <?php
 
-namespace Codesleeve\Stapler\Fixtures\Models;
+namespace Hollogram\Stapler\Fixtures\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
-use Codesleeve\Stapler\ORM\StaplerableInterface;
-use Codesleeve\Stapler\ORM\EloquentTrait;
+use Hollogram\Stapler\ORM\StaplerableInterface;
+use Hollogram\Stapler\ORM\EloquentTrait;
 
 class Photo extends Eloquent implements StaplerableInterface
 {

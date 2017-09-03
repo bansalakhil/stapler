@@ -1,8 +1,8 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
-use Codesleeve\Stapler\Interfaces\Validator as ValidatorInterface;
+use Hollogram\Stapler\Interfaces\Validator as ValidatorInterface;
 
 class Validator implements ValidatorInterface
 {

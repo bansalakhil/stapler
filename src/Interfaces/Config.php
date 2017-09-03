@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler\Interfaces;
+namespace Hollogram\Stapler\Interfaces;
 
 interface Config
 {

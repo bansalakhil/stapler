@@ -1,6 +1,6 @@
 {
   "providers": [
-    "Codesleeve\Stapler\StaplerServiceProvider",
+    "Hollogram\Stapler\StaplerServiceProvider",
   ],
   "aliases" : [
   ]

@@ -12,7 +12,7 @@
 >
     <testsuites>
         <testsuite name="Stapler Test Suite">
-            <directory suffix=".php">./tests/Codesleeve/Stapler/</directory>
+            <directory suffix=".php">./tests/Hollogram/Stapler/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

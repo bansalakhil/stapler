@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesleeve\Stapler;
+namespace Hollogram\Stapler;
 
 use PHPUnit_Framework_TestCase;
 use Mockery as m;
@@ -10,14 +10,14 @@ class InterpolatorTest extends PHPUnit_Framework_TestCase
     /**
      * An attachment instance.
      * 
-     * @var \Codesleeve\Stapler\Attachment
+     * @var \Hollogram\Stapler\Attachment
      */
     protected $attachment;
 
     /**
      * An interpolator instance.
      * 
-     * @var \Codesleeve\Stapler\Interpolator
+     * @var \Hollogram\Stapler\Interpolator
      */
     protected $interpolator;
 
@@ -131,18 +131,18 @@ class InterpolatorTest extends PHPUnit_Framework_TestCase
     /**
      * Build a mock attachment object.
      *
-     * @param  \Codesleeve\Stapler\Interpolator
+     * @param  \Hollogram\Stapler\Interpolator
      *
-     * @return \Codesleeve\Stapler\Attachment
+     * @return \Hollogram\Stapler\Attachment
      */
     protected function build_mock_attachment($interpolator, $className = 'TestModel')
     {
         $instance = $this->build_mock_instance();
         $attachmentConfig = new AttachmentConfig('photo', ['styles' => [], 'default_style' => 'original']);
         $imagine = m::mock('Imagine\Image\ImagineInterface');
-        $resizer = new \Codesleeve\Stapler\File\Image\Resizer($imagine);
+        $resizer = new \Hollogram\Stapler\File\Image\Resizer($imagine);
 
-        $attachment = m::mock('Codesleeve\Stapler\Attachment[getInstanceClass]', [$attachmentConfig, $interpolator, $resizer]);
+        $attachment = m::mock('Hollogram\Stapler\Attachment[getInstanceClass]', [$attachmentConfig, $interpolator, $resizer]);
         $attachment->shouldReceive('getInstanceClass')->andReturn($className);
         $attachment->setInstance($instance);
 
@@ -156,7 +156,7 @@ class InterpolatorTest extends PHPUnit_Framework_TestCase
      */
     protected function build_mock_instance()
     {
-        $instance = m::mock('Codesleeve\Stapler\ORM\StaplerableInterface');
+        $instance = m::mock('Hollogram\Stapler\ORM\StaplerableInterface');
         $instance->shouldReceive('getKey')->andReturn(1);
         $instance->shouldReceive('getAttribute')->with('photo_file_name')->andReturn('test.jpg');
         $instance->shouldReceive('getAttribute')->with('photo_file_size')->andReturn(0);
