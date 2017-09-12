@@ -50,7 +50,9 @@ class S3 implements StorageInterface
      */
     public function url($styleName)
     {
-        return $this->s3Client->getObjectUrl($this->attachedFile->s3_object_config['Bucket'], $this->path($styleName), null, ['PathStyle' => true]);
+        return $this->signedUrl($styleName);
+
+        //return $this->s3Client->getObjectUrl($this->attachedFile->s3_object_config['Bucket'], $this->path($styleName), null, ['PathStyle' => true]);
     }
 
     /**
@@ -62,12 +64,11 @@ class S3 implements StorageInterface
     public function signedUrl($styleName)
     {
         $command = $this->s3Client->getCommand('GetObject', [
-                    'Bucket' => $this->attachedFile->s3_object_config['Bucket'],
-                    'Key' => $this->path($styleName)
+            'Bucket' => $this->attachedFile->s3_object_config['Bucket'],
+            'Key' => $this->path($styleName)
         ]);
 
-        $request = $this->s3Client->createPresignedRequest($command, '+10 minutes');
-        return  (string) $request->getUri();
+        return $command->createPresignedUrl('+10 minutes');
     }
 
     /**
