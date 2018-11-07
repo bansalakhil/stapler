@@ -111,16 +111,6 @@ trait EloquentTrait
     }
 
     /**
-     * Get all of the current attributes and attachment objects on the model.
-     *
-     * @return mixed
-     */
-    public function getAttributes()
-    {
-        return array_merge($this->attachedFiles, parent::getAttributes());
-    }
-
-    /**
      * Return the image paths (across all styles) for a given attachment.
      *
      * @param  string $attachmentName
