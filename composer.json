@@ -1,5 +1,5 @@
 {
-    "name": "hollogram/stapler",
+    "name": "bansalakhil/stapler",
     "description": "Elegant and simple ORM-based file upload package for php.",
     "keywords": ["ORM", "file", "upload", "S3", "AWS", "paperclip"],
     "license": "MIT",
@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/http-foundation": "~2.3|~3.0",
+        "symfony/http-foundation": "~4.0",
         "imagine/imagine": "~0.6.2",
         "doctrine/inflector": "~1"
     },
