@@ -10,7 +10,7 @@ class Validator implements ValidatorInterface
      * @var
      */
     protected static $responseCode;
-    
+
     /**
      * Validate the attachment options for an attachment type.
      * A url is required to have either an :id or an :id_partition interpolation.
@@ -51,23 +51,23 @@ class Validator implements ValidatorInterface
             throw new Exceptions\InvalidUrlOptionException('Invalid Path: a bucket is required for s3 storage.', 1);
         }
 
-        if (self::$responseCode === null) {
-            $curl = curl_init();
+        // if (self::$responseCode === null) {
+        //     $curl = curl_init();
 
-            curl_setopt_array($curl, [
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_CONNECTTIMEOUT => 2,
-                CURLOPT_URL => 'http://169.254.169.254/latest/meta-data/iam/security-credentials/'
-            ]);
+        //     curl_setopt_array($curl, [
+        //         CURLOPT_RETURNTRANSFER => true,
+        //         CURLOPT_CONNECTTIMEOUT => 2,
+        //         CURLOPT_URL => 'http://169.254.169.254/latest/meta-data/iam/security-credentials/'
+        //     ]);
 
-            curl_exec($curl);
+        //     curl_exec($curl);
 
-            self::$responseCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+        //     self::$responseCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-            curl_close($curl);
-        }
+        //     curl_close($curl);
+        // }
 
-        if (self::$responseCode === 0) {
+        // if (self::$responseCode === 0) {
             if (!$options['s3_client_config']['secret']) {
                 throw new Exceptions\InvalidUrlOptionException('Invalid Path: a secret is required for s3 storage.', 1);
             }
@@ -75,6 +75,6 @@ class Validator implements ValidatorInterface
             if (!$options['s3_client_config']['key']) {
                 throw new Exceptions\InvalidUrlOptionException('Invalid Path: a key is required for s3 storage.', 1);
             }
-        }
+        // }
     }
 }
