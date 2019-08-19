@@ -305,6 +305,17 @@ class Attachment implements AttachmentInterface, JsonSerializable
         return $this->defaultUrl($styleName);
     }
 
+
+    public function signedUrl($styleName = '', $time = '+1 hour')
+    {
+        if ($this->originalFilename()) {
+            // dd($this->storageDriver);
+            return $this->storageDriver->signedUrl($styleName, $time);
+        }
+
+        return $this->defaultUrl($styleName);
+    }
+
     /**
      * Generates the file system path to an uploaded file (or a resized version of it).
      * This is used for saving files, etc.
